@@ -1,0 +1,24 @@
+timeout: 60
+read_timeout: 30
+max_retries: 3
+log_to_file: false
+log_file_name: philcrawler.log
+session_mount_url: https://
+batch_size: 1
+random_article_url: "https://en.wikipedia.org/wiki/Special:Random"
+paragraph_pattern: "//div[@id = 'mw-content-text']/p"
+list_pattern: "//div[@id = 'mw-content-text']/li"
+href_pattern: '(?<=<a href=")/wiki/[a-zA-Z\(\)\-\,_#]*?(?=")'
+italic_pattern: '\<i>.*?\</i>'
+parantheses_pattern: '\(.*?\)'
+base_url: https://en.wikipedia.org
+final_node: /wiki/Philosophy
+dead_end_status: deadend
+cyclic_status: cycle
+success_status: success
+in_progress_status: inprogress
+begin_status: begin
+article_limit: 500
+max_recursion_depth: 100
+optimized: true
+print_trail: false
